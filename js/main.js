@@ -21,13 +21,16 @@ var cards = [
     }
 ];
 var cardsInPlay=[];
+var scores = 0;
 
 var checkForMatch = function() {
     if (cardsInPlay[0] === cardsInPlay[1]) {
-        alert("You found a match!")
+        score = +1;
+        alert("You found a match!");
+        
     } else {
         alert("Sorry, try again.")
-    }
+    };
 }
 
 function getRandomInt(max) {
@@ -69,6 +72,7 @@ var resetBoard = function() {
 
     cardsInPlay = [];
 }
+
 var createBoard = function() {
   
     for (var i = 0; i < cards.length; i++) {
@@ -81,9 +85,19 @@ var createBoard = function() {
 
 }
 
-createBoard();
+var endGame = function() {
+    
+    alert(`Thank you for playing. Your final score is ${score}`);
+    score = 0;
+    resetBoard();    
+}
 
 btn = document.getElementById('reset');
 
 btn.addEventListener('click', resetBoard);
+
+endBtn = document.getElementById('end-game');
+endBtn.addEventListener('click', endGame);
+
+createBoard();
 
