@@ -101,3 +101,19 @@ footer {
     color: #F15B31;
     font-weight: 700;
 }
+
+button {
+    background-color: Red;
+    color: white;
+    width: 80px;
+    padding: 10px;
+    border-radius: 30%;
+    font-weight: 800;
+    font-size: 16px;
+    outline: none;
+}
+
+button:hover {
+    background-color: blue;
+}
+
