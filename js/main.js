@@ -1,4 +1,4 @@
-var cards = [
+var cardsMaster = [
     {
         rank: "queen",
         suit: "hearts",
@@ -20,6 +20,9 @@ var cards = [
         cardImage: "images/king-of-diamonds.png"
     }
 ];
+
+var cards = [];
+
 var cardsInPlay=[];
 var scores = 0;
 
@@ -39,8 +42,8 @@ function getRandomInt(max) {
 
 var flipCard = function() {
     
-    var cardId = getRandomInt(4);
-    // this.getAttribute('data-id');
+    // var cardId = getRandomInt(4);
+    cardId = this.getAttribute('data-id');
     
     cardsInPlay.push(cards[cardId].rank);
 
@@ -71,6 +74,7 @@ var resetBoard = function() {
       });
 
     cardsInPlay = [];
+    createCard();
 }
 
 var createBoard = function() {
@@ -83,6 +87,18 @@ var createBoard = function() {
         document.getElementById('game-board').appendChild(cardElement);
     }
 
+}
+
+var createCard = function() {
+    cards = [];
+    
+    // for (i=0; i<4; i++) {
+    while (cards.length < 4) {
+        var cardId = getRandomInt(4);
+        if (!cards.includes(cardsMaster[cardId])) {
+        cards.push(cardsMaster[cardId]);
+        }
+    }
 }
 
 var endGame = function() {
@@ -98,6 +114,8 @@ btn.addEventListener('click', resetBoard);
 
 endBtn = document.getElementById('end-game');
 endBtn.addEventListener('click', endGame);
+
+createCard();
 
 createBoard();
 
