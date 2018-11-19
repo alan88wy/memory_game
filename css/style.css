@@ -1,9 +1,9 @@
 h1 {
     font-family: "Raleway", sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     color: #FFFFFF;
     letter-spacing: 1px;
-    font-size: 0.5rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     margin: 0;
 }
@@ -13,7 +13,7 @@ a {
     font-weight: 600;
     color: #FFFFFF;
     letter-spacing: 1px;
-    font-size: 14px;
+    font-size: 1rem;
     margin-left: 20px;
     margin-right: 20px;
     text-transform: uppercase;
@@ -21,22 +21,23 @@ a {
     border-bottom: 2px solid transparent;
 }
 
-
-
 h2 {
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     color: #0D2C40;
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 1rem;
     text-transform: uppercase;
+    margin: 5px;
 }
 
 
 p {
     font-family: "Droid Serif", serif;
-    line-height: 26px;
-    font-size: 18px;
+    line-height: 1.3rem;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    margin: 0;
 }
 
 body {
@@ -46,34 +47,67 @@ body {
 
 header {  
     background-color: #F15B31;
-    padding: 1.5rem 1rem;
+    padding: 1rem 1rem;
     /* width: 100%; */
 }
+
+nav {
+    background-color: #00A6B3;
+    padding: 0.6rem;
+}
+
 
 @media (min-width: 40rem) {
     h1 {
         font-size: 2.5rem;
         font-weight: 400;
-    },
-    header {
-        padding: 3rem 1.5rem;
     }
-}
-
-
-nav {
-    background-color: #00A6B3;
-    padding: 20px;
+    header {
+        padding: 2rem 1.5rem;
+    }
+    a {
+        font-size: 1.5rem;
+      }
+    nav {
+        padding: 1.5rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+        margin: 2rem;
+    }
+    p {
+        font-size: 1.5rem;
+        line-height: 2.1rem;
+        padding: 1.5rem;
+    }
+    main {
+        /* width: 850px; */
+        width: 100vw;
+        margin: 35px auto;
+    }
+    img {
+        margin: 40px 8px;
+    }
+    footer {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    footer p {
+        font-size: 1rem;
+    }
 }
 
 main {
     /* width: 850px; */
     width: 100vw;
-    margin: 35px auto;
+    margin: auto;
 }
 
 img {
-    margin: 40px 8px;
+    margin: 10px 2px;
+    width: 20%;
+    height: 50%;
 }
 
 a:hover {
@@ -84,12 +118,16 @@ a:hover {
 
 footer {
     text-transform: uppercase;
-    padding: 0 20px;
+    padding: 0 1.5rem;
     background-color: #0D2C40;
     color: white;
-    font-size: 14px;
+    font-size: 0.5rem;
     letter-spacing: .08em;
     font-weight: 500;
+}
+
+footer p {
+    font-size: 0.6rem;
 }
 
 .copyright {
