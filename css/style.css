@@ -55,12 +55,8 @@ nav {
 }
 
 main {
-    width: 850px;
+    /* width: 850px; */
     margin: 35px auto;
-}
-
-main div {
-    display: flexbox;
 }
 
 img {
