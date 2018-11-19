@@ -3,7 +3,7 @@ h1 {
     font-weight: 400;
     color: #FFFFFF;
     letter-spacing: 1px;
-    font-size: 45px;
+    font-size: 1.6rem;
     text-transform: uppercase;
     margin: 0;
 }
@@ -13,13 +13,15 @@ a {
     font-weight: 600;
     color: #FFFFFF;
     letter-spacing: 1px;
-    font-size: 18px;
+    font-size: 14px;
     margin-left: 20px;
     margin-right: 20px;
     text-transform: uppercase;
     text-decoration: none;
     border-bottom: 2px solid transparent;
 }
+
+
 
 h2 {
     font-family: "Raleway", sans-serif;
@@ -42,12 +44,21 @@ body {
     margin: 0;
 }
 
-header {
-    
+header {  
     background-color: #F15B31;
-    padding: 30px 20px;
+    padding: 1.5rem 1rem;
     /* width: 100%; */
 }
+
+@media (min-width: 40rem) {
+    h1 {
+        font-size: 2.5rem;
+    },
+    header {
+        padding: 3rem 1.5rem;
+    }
+}
+
 
 nav {
     background-color: #00A6B3;
