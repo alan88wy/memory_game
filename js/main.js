@@ -24,13 +24,13 @@ var cardsMaster = [
 var cards = [];
 
 var cardsInPlay=[];
-var scores = 0;
+var score = 0;
 
 var checkForMatch = function() {
     if (cardsInPlay[0] === cardsInPlay[1]) {
-        score = +1;
+        score +=1;
         alert("You found a match!");
-        
+
     } else {
         alert("Sorry, try again.")
     };
@@ -41,10 +41,10 @@ function getRandomInt(max) {
 }
 
 var flipCard = function() {
-    
+
     // var cardId = getRandomInt(4);
     cardId = this.getAttribute('data-id');
-    
+
     cardsInPlay.push(cards[cardId].rank);
 
     this.setAttribute('src', cards[cardId].cardImage);
@@ -57,7 +57,7 @@ var flipCard = function() {
 var resetBoard = function() {
 
     imgList = document.querySelectorAll('img');
-    
+
     // for (var i = 0; i < imgList.length; i++) {
     //     imgList[i].src= "images/back.png";
     // };
@@ -78,7 +78,7 @@ var resetBoard = function() {
 }
 
 var createBoard = function() {
-  
+
     for (var i = 0; i < cards.length; i++) {
         var cardElement = document.createElement('img');
         cardElement.setAttribute('src', "images/back.png");
@@ -91,7 +91,7 @@ var createBoard = function() {
 
 var createCard = function() {
     cards = [];
-    
+
     // for (i=0; i<4; i++) {
     while (cards.length < 4) {
         var cardId = getRandomInt(4);
@@ -102,15 +102,15 @@ var createCard = function() {
 }
 
 var endGame = function() {
-    
+
     alert(`Thank you for playing. Your final score is ${score}`);
     score = 0;
-    resetBoard();    
+    resetBoard();
 }
 
-btn = document.getElementById('reset');
+resetBtn = document.getElementById('reset');
 
-btn.addEventListener('click', resetBoard);
+resetBtn.addEventListener('click', resetBoard);
 
 endBtn = document.getElementById('end-game');
 endBtn.addEventListener('click', endGame);

@@ -139,22 +139,22 @@ button:hover {
         font-weight: 400;
     }
     header {
-        padding: 2rem 1.5rem;
+        padding: 1rem 1rem;
     }
     a {
         font-size: 1.5rem;
       }
     nav {
-        padding: 1.5rem;
+        padding: 1rem;
     }
     h2 {
         font-size: 1.5rem;
-        margin: 2rem;
+        margin: 0.5rem;
     }
     p {
-        font-size: 1.5rem;
-        line-height: 2.1rem;
-        padding: 1.5rem;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        padding: 0.5rem;
     }
     main {
         /* width: 850px; */
@@ -162,13 +162,13 @@ button:hover {
         margin: 35px auto;
     }
     img {
-				margin: 40px 8px;
-				width: 20%;
-				height: 50%;
+				margin: 20px 8px;
+				width: 200px;
+				height: 300px;
     }
     footer {
         position: relative;
-        font-size: 1rem;
+        font-size: 0.6rem;
         font-weight: 500;
     }
     footer p {
@@ -178,7 +178,8 @@ button:hover {
         width: 10rem;
         padding: 0.1rem;
         font-weight: 800;
-        font-size: 1.5rem;
+				font-size: 1.5rem;
+				border: none;
     }
 }
 
